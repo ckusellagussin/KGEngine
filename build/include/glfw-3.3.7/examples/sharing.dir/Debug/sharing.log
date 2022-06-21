@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/GameEngine/KGEngine/include/glfw-3.3.7/examples/CMakeLists.txt
+  sharing.c
+  glad_gl.c
+  Generating Code...
+  sharing.vcxproj -> C:\GameEngine\KGEngine\build\include\glfw-3.3.7\examples\Debug\sharing.exe

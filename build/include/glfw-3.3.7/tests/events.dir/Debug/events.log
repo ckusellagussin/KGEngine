@@ -1,0 +1,6 @@
+﻿  Building Custom Rule C:/GameEngine/KGEngine/include/glfw-3.3.7/tests/CMakeLists.txt
+  events.c
+  getopt.c
+  glad_gl.c
+  Generating Code...
+  events.vcxproj -> C:\GameEngine\KGEngine\build\include\glfw-3.3.7\tests\Debug\events.exe

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate"
+		},
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/d23df39b20a234150202309f108dd206/glfw-populate.rule"
+		},
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/25fe53b3e8fce58c9d234a31b9b52b3b/glfw-populate-complete.rule"
+		},
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/88d4011845057250034b768ff87093ea/glfw-populate-build.rule"
+		},
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/88d4011845057250034b768ff87093ea/glfw-populate-configure.rule"
+		},
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/88d4011845057250034b768ff87093ea/glfw-populate-download.rule"
+		},
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/88d4011845057250034b768ff87093ea/glfw-populate-install.rule"
+		},
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/88d4011845057250034b768ff87093ea/glfw-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/88d4011845057250034b768ff87093ea/glfw-populate-patch.rule"
+		},
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/88d4011845057250034b768ff87093ea/glfw-populate-test.rule"
+		},
+		{
+			"file" : "C:/GameEngine/KGEngine/build/_deps/glfw-subbuild/CMakeFiles/88d4011845057250034b768ff87093ea/glfw-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glfw-populate"
+		],
+		"name" : "glfw-populate"
+	}
+}

@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/GameEngine/KGEngine/include/glfw-3.3.7/tests/CMakeLists.txt
+  triangle-vulkan.c
+  glad_vulkan.c
+  Generating Code...
+  triangle-vulkan.vcxproj -> C:\GameEngine\KGEngine\build\include\glfw-3.3.7\tests\Debug\triangle-vulkan.exe

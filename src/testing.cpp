@@ -1,5 +1,6 @@
 #include "KGEngine.h"
-int main() {
+
+int main() 
+{
     Initialise();
-    return 0;
 }

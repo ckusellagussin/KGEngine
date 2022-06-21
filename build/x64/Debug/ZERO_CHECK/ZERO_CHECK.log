@@ -1,17 +1,1 @@
-﻿  Checking Build System
-  CMake is re-running because C:/GameEngine/KGEngine/build/CMakeFiles/generate.stamp is out-of-date.
-    the file 'C:/GameEngine/KGEngine/CMakeLists.txt'
-    is newer than 'C:/GameEngine/KGEngine/build/CMakeFiles/generate.stamp.depend'
-    result='-1'
-  CMake Warning (dev) at C:/Users/Casey/Documents/Dependencies/vcpkg/installed/x64-windows/share/glfw3/glfw3Targets.cmake:53 (add_library):
-    ADD_LIBRARY called with SHARED option but the target platform does not
-    support dynamic linking.  Building a STATIC library instead.  This may lead
-    to problems.
-  Call Stack (most recent call first):
-    C:/Users/Casey/Documents/Dependencies/vcpkg/installed/x64-windows/share/glfw3/glfw3Config.cmake:1 (include)
-    CMakeLists.txt:8 (find_package)
-  This warning is for project developers.  Use -Wno-dev to suppress it.
-  
-  -- Configuring done
-  -- Generating done
-  -- Build files have been written to: C:/GameEngine/KGEngine/build
+﻿

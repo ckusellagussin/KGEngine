@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/GameEngine/KGEngine/build/include/glfw-3.3.7/cmake_install.cmake")
+  include("C:/GameEngine/KGEngine/build/_deps/glfw-build/cmake_install.cmake")
 
 endif()
 

@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/GameEngine/KGEngine/include/glfw-3.3.7/examples/CMakeLists.txt
+  splitview.c
+  glad_gl.c
+  Generating Code...
+  splitview.vcxproj -> C:\GameEngine\KGEngine\build\include\glfw-3.3.7\examples\Debug\splitview.exe

@@ -5,7 +5,7 @@ cmake_minimum_required (VERSION 3.8)
 
 find_package(Vulkan REQUIRED)
 find_package(glm REQUIRED)
-
+find_package(OpenGL REQUIRED)
 
 project (KGEngine)
 
@@ -29,8 +29,25 @@ add_executable(program ${TESTING_SOURCE})
 target_link_libraries(program engine)
 target_link_libraries(engine Vulkan::Vulkan)
 target_link_libraries(engine glm::glm)
+target_link_libraries(engine OpenGL::GL)
+target_link_libraries(engine glfw)
 include_directories(C:/VulkanSDK/1.3.211.0/Include)
-add_subdirectory(C:/GameEngine/KGEngine/include/glfw-3.3.7)
+
+include(FetchContent)
+FetchContent_Declare(
+    glfw
+    GIT_REPOSITORY https://github.com/glfw/glfw.git
+)
+
+set_property(GLOBAL PROPERTY USE_FOLDERS YES)
+set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "Utilities/cmake")
+
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(glfw)
+
+
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET engine PROPERTY CXX_STANDARD 20)

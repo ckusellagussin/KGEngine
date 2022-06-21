@@ -1,0 +1,6 @@
+﻿  Building Custom Rule C:/GameEngine/KGEngine/include/glfw-3.3.7/tests/CMakeLists.txt
+  empty.c
+  tinycthread.c
+  glad_gl.c
+  Generating Code...
+  empty.vcxproj -> C:\GameEngine\KGEngine\build\include\glfw-3.3.7\tests\Debug\empty.exe

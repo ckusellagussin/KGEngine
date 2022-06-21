@@ -1,0 +1,7 @@
+﻿  Building Custom Rule C:/GameEngine/KGEngine/include/glfw-3.3.7/tests/CMakeLists.txt
+  glfwinfo.c
+  getopt.c
+  glad_gl.c
+  glad_vulkan.c
+  Generating Code...
+  glfwinfo.vcxproj -> C:\GameEngine\KGEngine\build\include\glfw-3.3.7\tests\Debug\glfwinfo.exe
