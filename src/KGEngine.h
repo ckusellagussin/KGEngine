@@ -8,7 +8,8 @@
 #include <iostream>
 #include <stdexcept>
 #include <cstdlib>
-#include<vector>
+#include <vector>
+#include <cstring>
 
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE
@@ -31,4 +32,6 @@ private:
 	void initVulkan();
 	void mainLoop();
 	void cleanup();
+	
+	bool checkValidaitonSupport();
 };

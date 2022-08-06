@@ -8,6 +8,18 @@
 		VkInstance instance = nullptr;
 	}
 
+	const uint32_t WIDTH = 800;
+	const uint32_t HEIGHT = 600;
+
+	const std::vector<const char*> validationLayers = { "VK_LAYER_KHRONOS_validation" };
+
+#ifdef NDEBUG
+	const bool enableValidaitonLayers = false;
+#else
+	const bool enableValidaitonLayers = true;
+#endif // NDEBUG
+
+
 
 
 	//The overhead that is used to execute through program
@@ -22,10 +34,17 @@
 
 
 
-	/*Creates an instance that makes the connection between the libraryand the gpu driverand specifies details
+	/*Creates an instance that makes the connection between the library, gpu driver and specifies details
 	about the engine/app.*/
 	void HelloTriangleApp::createInstance()
 	{
+
+		if (enableValidaitonLayers && !checkValidaitonSupport())
+		{
+			throw std::runtime_error(" Validation Layers requested but are not available");
+
+		}
+
 		VkApplicationInfo appInfo{};
 		appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
 		appInfo.pApplicationName = "Hello Triangle";
@@ -50,10 +69,20 @@
 		glfwExtentions =
 			glfwGetRequiredInstanceExtensions(&glfwExtentionCount);
 
+
 		createInfo.enabledExtensionCount = glfwExtentionCount;
 		createInfo.ppEnabledExtensionNames = glfwExtentions;
 		
 		createInfo.enabledLayerCount = 0;
+
+		if (enableValidaitonLayers)
+		{
+			createInfo.enabledLayerCount = static_cast<uint32_t>(validationLayers.size());
+			createInfo.ppEnabledLayerNames = validationLayers.data();
+		}
+		else {
+			createInfo.enabledLayerCount = 0;
+		}
 
 		VkResult result = vkCreateInstance(&createInfo, nullptr, &instance);
 
@@ -126,6 +155,43 @@
 			glfwPollEvents();
 
 		}
+	}
+
+
+	//checks to see how many validaiton layers there are
+	bool HelloTriangleApp::checkValidaitonSupport()
+	{
+
+		uint32_t layerCount;
+		vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
+
+		std::vector <VkLayerProperties> availableLayers(layerCount);
+		vkEnumerateInstanceLayerProperties(&layerCount, availableLayers.data());
+
+		for (const char* layerName : validationLayers)
+		{
+			bool layerFound = false;
+
+			for (const auto& layerProperties : availableLayers)
+			{
+
+				if (strcmp(layerName, layerProperties.layerName) == 0)
+				{
+					layerFound = true;
+					break;
+				}
+
+			}
+			if (!layerFound)
+			{
+
+				return false;
+			}
+
+		}
+
+		return true;
+
 	}
 
 	
