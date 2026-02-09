@@ -9,13 +9,8 @@
 class renderer
 {
 public:
-    int VBO, VAO, EBA;
-    GLFWwindow* Window;
-    
+    GLFWwindow* window;
     void windowInitialization();
-    
-
-    
 };
 
 #endif
