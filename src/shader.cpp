@@ -1,16 +1,17 @@
 ﻿#include "shader.hpp"
 
-const char *vertexShaderSource = "#version 330 core\n"
+const char *vertexShaderSource ="#version 330 core\n"
 "layout (location = 0) in vec3 aPos;\n"
 "void main()\n"
 "{\n"
-"gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0;\n"
+"gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
 "}\0";
 
 const char *fragmentShaderSource = "#version 330 core\n"
-"our vec4 FragColor;\n"
+"out vec4 FragColour;\n"
+"void main()"
 "{\n"
-"FragColour = vec4(1.0, 0.5f, 0.2f, 1.0f)\n"
+"FragColour = vec4(0.3f, 0.8f, 0.2f, 1.0f);\n"
 "}\n\0";
 
 
