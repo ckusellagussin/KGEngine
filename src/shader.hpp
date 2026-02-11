@@ -10,9 +10,7 @@ class shader
 {
 public:
     unsigned int VBO, VAO, EBO, vertexShader, fragmentShader, shaderProgram;
-    
     void shaderInit();
-    
 };
 
 #endif
