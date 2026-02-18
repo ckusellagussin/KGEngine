@@ -1,5 +1,6 @@
 ﻿#include "renderer.hpp"
 #include "shader.hpp"
+#include "shader_handler.hpp"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void windowEscape(GLFWwindow *window);
@@ -33,19 +34,16 @@ void renderer::windowInitialization()
     }
 
     shader shader;
+    shader_handler newShader("../shaders/vertex.vertex" , "../shaders/frag.frag");
+    shader.shaderInit();
+    
     while(!glfwWindowShouldClose(window))
     {
         windowEscape(window);
         glClearColor(0.3f,0.3f,0.3f,1.0);
         glClear(GL_COLOR_BUFFER_BIT);
-
-        shader.shaderInit();
-
-        float timeValue = glfwGetTime();
-        float greenValue = sin(timeValue) / 2.0f + 0.5f;
-        int vertexColourLocation = glGetUniformLocation(shader.shaderProgram, "uColour");
-        glUseProgram(shader.shaderProgram);
-        glUniform4f(vertexColourLocation, 0.0f, greenValue, 0.0f, 1.0f);
+        
+        newShader.use();
         
         glBindVertexArray(shader.VAO);
         glDrawArrays(GL_TRIANGLES, 0 , 6);
